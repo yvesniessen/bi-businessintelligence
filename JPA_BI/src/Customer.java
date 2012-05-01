@@ -33,7 +33,6 @@ import java.util.ArrayList;
  */
 
 @Entity
-@Table(name="CUSTOMER_TABLE")
 public class Customer implements Serializable {
 
 	/**
@@ -76,6 +75,10 @@ public class Customer implements Serializable {
 
     public void setAdresses(Collection<Address> newValue) {
         this.addresses = newValue;
+    }
+    
+    public void setAdress(Address newValue) {
+        this.addresses.add(newValue);                
     }
 
     public Status getStatus() {
