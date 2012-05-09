@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/DefaultNamespace/Webservice.java=UTF-8
+encoding//src/DefaultNamespace/WebserviceService.java=UTF-8
+encoding//src/DefaultNamespace/WebserviceServiceLocator.java=UTF-8
+encoding//src/DefaultNamespace/WebserviceSoapBindingStub.java=UTF-8
+encoding//src/webservice/WebService.java=UTF-8
+encoding//src/webservice/WebServiceService.java=UTF-8
+encoding//src/webservice/WebServiceServiceLocator.java=UTF-8
+encoding//src/webservice/WebServiceSoapBindingStub.java=UTF-8
