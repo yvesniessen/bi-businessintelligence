@@ -13,12 +13,14 @@
       <operation xmlns:operNS="http://DefaultNamespace" name="main" qname="operNS:main" soapAction="">
         <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:args" type="tns:string"/>
       </operation>
-      <operation xmlns:operNS="http://DefaultNamespace" xmlns:retNS="http://DefaultNamespace" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addCustomer" qname="operNS:addCustomer" returnQName="retNS:addCustomerReturn" returnType="rtns:boolean" soapAction="">
+      <operation xmlns:operNS="http://DefaultNamespace" xmlns:retNS="http://DefaultNamespace" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="searchCustomer" qname="operNS:searchCustomer" returnQName="retNS:searchCustomerReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:vorname" type="tns:string"/>
         <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
-        <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Adresse" type="tns:string"/>
       </operation>
-      <operation xmlns:operNS="http://DefaultNamespace" xmlns:retNS="http://DefaultNamespace" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="searchCustomer" qname="operNS:searchCustomer" returnQName="retNS:searchCustomerReturn" returnType="rtns:string" soapAction="">
+      <operation xmlns:operNS="http://DefaultNamespace" xmlns:retNS="http://DefaultNamespace" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addCustomer" qname="operNS:addCustomer" returnQName="retNS:addCustomerReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:vorname" type="tns:string"/>
         <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
+        <parameter xmlns:pns="http://DefaultNamespace" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:adresse" type="tns:string"/>
       </operation>
       <parameter name="allowedMethods" value="searchCustomer addCustomer main"/>
 

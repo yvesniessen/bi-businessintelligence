@@ -50,22 +50,22 @@ public class DBController {
 	  }
 	}
 	
-	public String searchCustomer(String name)
+	public boolean searchCustomer(String vorname, String name)
 	{
-		 
-		List<Customer> tmp = null;
+		String realname = vorname + " " + name;
 		try
 		{
-		javax.persistence.Query q = myManager.createQuery("SELECT k FROM Customer k");
-		tmp = q.getResultList();
+		
+		javax.persistence.Query q = myManager.createQuery("SELECT k FROM Customer k WHERE k.name=:realname");//+"\""+realname+"\"");
+		q.setParameter("realname", realname);
+		if (q.getResultList().size() > 0) 
+		return true;
+		else return false;
 		}
 		catch(Exception e)
 		{
-			
-		}
-		
-		return tmp.toString();
-		
+			return false;
+		}		
 	}
 /**	
 	public static void main(String[] args) {

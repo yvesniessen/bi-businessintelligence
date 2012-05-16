@@ -8,27 +8,28 @@ public class Webservice {
 	 * @param args
 	 */
 	
-	static DBController dbc;
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	  dbc = new DBController();
+		DBController dbc = new DBController();
 	}
 	
-	public boolean addCustomer(String name, String Adresse)
-	{
+	public boolean addCustomer(String vorname, String name, String adresse)
+	{	
+		DBController dbc = new DBController();
 		Customer c1 = new Customer();
-		c1.setName(name);
+		c1.setName(vorname+ " " +name);
 		
 		Address ad1 = new Address();
-		ad1.setStrasse(Adresse);
+		ad1.setStrasse(adresse);
 		
 	return dbc.addCustomer(c1, ad1);
 	} 
 	
-	public String searchCustomer(String name)
+	public boolean searchCustomer(String vorname, String name)
 	{
-		return dbc.searchCustomer(name);
+		DBController dbc = new DBController();
+		return dbc.searchCustomer(vorname, name);
 	}
 
 }
