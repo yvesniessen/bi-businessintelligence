@@ -44,22 +44,22 @@ public class WebserviceProxy implements DefaultNamespace.Webservice {
     return webservice;
   }
   
+  public boolean searchCustomer(java.lang.String vorname, java.lang.String name) throws java.rmi.RemoteException{
+    if (webservice == null)
+      _initWebserviceProxy();
+    return webservice.searchCustomer(vorname, name);
+  }
+  
+  public boolean addCustomer(java.lang.String vorname, java.lang.String name, java.lang.String adresse) throws java.rmi.RemoteException{
+    if (webservice == null)
+      _initWebserviceProxy();
+    return webservice.addCustomer(vorname, name, adresse);
+  }
+  
   public void main(java.lang.String[] args) throws java.rmi.RemoteException{
     if (webservice == null)
       _initWebserviceProxy();
     webservice.main(args);
-  }
-  
-  public boolean addCustomer(java.lang.String name, java.lang.String adresse) throws java.rmi.RemoteException{
-    if (webservice == null)
-      _initWebserviceProxy();
-    return webservice.addCustomer(name, adresse);
-  }
-  
-  public java.lang.String searchCustomer(java.lang.String name) throws java.rmi.RemoteException{
-    if (webservice == null)
-      _initWebserviceProxy();
-    return webservice.searchCustomer(name);
   }
   
   
